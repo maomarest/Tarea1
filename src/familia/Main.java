@@ -85,7 +85,7 @@ public class Main {
         
         System.out.println();
         for (Persona p : fam.persona.values()){
-            if("Padre".equals(x.getRol()) && "Madre".equals(p.getRol()))
+            if("Padre".equals(x.getRol()) && "Madre".equals(p.getRol()))// Condicional para saber que parentesco tiene
                 relacion = "Esposa";
             else if(("Padre".equals(x.getRol()) || "Madre".equals(x.getRol())) && "Hijo".equals(p.getRol()))
                 relacion = "Hijo";
