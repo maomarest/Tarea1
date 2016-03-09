@@ -1,3 +1,9 @@
+/**
+ * @author Emmanuel Vanegas Arias, Mauricio Martinez Estrada y Sebastian Gil
+ * @since 09/03/2016
+ * @version 1.0
+ */
+
 package familia;
 
 import java.util.*;
@@ -6,7 +12,12 @@ public class Main {
 
     static Scanner sc = new Scanner(System.in);
     static HashMap<String, Familia> f = new HashMap<>();
-
+    
+    /**
+     * @param args función principal donde se lleva a cabo el proceso de 
+     * ingresar las nuevas familias, consultar familia o consultar por 
+     * miembro de familia. Se declaran todos los arreglos.
+     */
     public static void main(String[] args) {
         while(true){
             System.out.println("Digite (1) si desea ingresar una nueva familia, "
@@ -20,7 +31,13 @@ public class Main {
             System.out.println();
         }   
     }
-
+    
+    /**
+     * @param args función donde se lleva a cabo el proceso de 
+     * registrar familias, digitando el numero de miembros que incluye
+     * cada familia y posteriomente ingresar los datos de la persona.
+     */
+    
     public static void registrarFamilia() {
         HashMap<String, Persona> persona = new HashMap<>();
         System.out.print("Escriba el apellido familiar: ");
@@ -38,6 +55,12 @@ public class Main {
         f.put(apellido, new Familia(apellido, persona));
     }
     
+    /**
+     * @param args función donde se lleva a cabo el proceso de 
+     * consultar familia,donde se ingresa el apellido de la familia y 
+     * posteriormente se muestran datos como rol de la persona, nombre apellido,
+     * edad y genero.
+     */
     public static void consultarFamilia() {
         System.out.print("Escriba el apellido de la familia: ");
         Familia fam = f.get(sc.next());
@@ -45,6 +68,12 @@ public class Main {
             System.out.println(p.getRol() + ": " + p.getNombre()+" "+p.getApellido()+", "+p.getEdad()+" años, "+p.getGenero());
     }
     
+    /**
+     * @param args función donde se lleva a cabo el proceso de 
+     * consultar miembro, escribiendo el apellido de la familia, luego 
+     * escribiendo el nombre de la persona. Dando como resultado los parentescos
+     * el nombre, el apellido, la edad y el genero de los familiares.
+     */
     public static void consultarMiembro(){
         System.out.println("Escriba el apellido de la familia: ");
         Familia fam = f.get(sc.next());

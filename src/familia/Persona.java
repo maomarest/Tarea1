@@ -1,4 +1,16 @@
+/**
+ * @author Emmanuel Vanegas Arias, Mauricio Martinez Estrada y Sebastian Gil
+ * @since 09/03/2016
+ * @version 1.0
+ */
+
 package familia;
+/**
+     * Se identifica a cada persona especificamente con nombre, apellido, edad,
+     * genero y rol dentro de la familia (madre,padre o hijo). Con sus 
+     * respectivos Setters y Getters.
+     *
+     */
 
 public class Persona {
     private String nombre;
